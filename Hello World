@@ -1,8 +1,4 @@
-# Run this program on your local python 
-# interpreter, provided you have installed 
-# the required libraries. 
-  
-# Importing the required packages 
+ 
 import numpy as np 
 import pandas as pd 
 from sklearn.metrics import confusion_matrix 
