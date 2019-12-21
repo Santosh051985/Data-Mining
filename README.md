@@ -1,4 +1,4 @@
-# Data-Minining Example of calculating class probabilities of two different class i.e 1= True and 0=False
+# Data-Mining Example of calculate class probabilities of two different class i.e 1= True and 0=False
 Include Math library which has required for calculation of  probabilities.
 Develop various functions  such as 
   a)Split the dataset by class values,it returns a dictionar.
