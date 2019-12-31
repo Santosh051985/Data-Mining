@@ -2,7 +2,6 @@
 mydata<-read.csv("Universities_clustering.csv") ## use read.csv for csv files
 View(mydata)
 help(princomp)
-?princomp ## to understand the api for princomp
 
 ## the first column in mydata has university names
 View(mydata[-1]) 
@@ -19,8 +18,6 @@ loadings(pcaObj)
 
 plot(pcaObj) # graph showing importance of principal components 
 # Comp.1 having highest importance (highest variance)
-
-#biplot(pcaObj)
 
 #pcaObj$loadings
 pcaObj$scores #- this is to check the scores of your principal components
