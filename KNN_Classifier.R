@@ -19,10 +19,8 @@ round(prop.table(table(wbcd$diagnosis)) * 100, digits = 1)
 # summarize any three numeric features
 summary(wbcd[c("radius_mean", "area_mean", "smoothness_mean")])
 
-# create normalization function
-normalize <- function(x) {
-  return ((x - min(x)) / (max(x) - min(x)))
-}
+# To create normalization function
+normalize <- function(x) {return ((x - min(x)) / (max(x) - min(x)))}
 
 # test normalization function - result should be identical
 #normalize(c(0.01, 0.02, 0.03, 0.04, 0.05))
@@ -51,14 +49,10 @@ wbcd_test_labels <- wbcd_test_labels[["diagnosis"]]
 # load the "class" library
 install.packages("class")
 library(class)
-?knn
+?knn # To get more information regarding KNN Algorithm
 
 wbcd_test_pred <- knn(train = wbcd_train, test = wbcd_test, cl = wbcd_train_labels, k=21)
-
-
-
 ##--------Evaluating model performance ----
-
 # load the "gmodels" library
 library(gmodels)
 
@@ -79,12 +73,10 @@ wbcd_test <- wbcd_z[470:569, ]
 
 
 # re-classify test cases
-wbcd_test_pred <- knn(train = wbcd_train, test = wbcd_test,
-                      cl = wbcd_train_labels, k=21)
+wbcd_test_pred <- knn(train = wbcd_train, test = wbcd_test, cl = wbcd_train_labels, k=21)
 
 # Create the cross tabulation of predicted vs. actual
-CrossTable(x = wbcd_test_labels, y = wbcd_test_pred,
-           prop.chisq=FALSE)
+CrossTable(x = wbcd_test_labels, y = wbcd_test_pred,prop.chisq=FALSE)
 
 # try several different values of k
 wbcd_train <- wbcd_n[1:469, ]
