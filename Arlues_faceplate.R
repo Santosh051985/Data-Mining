@@ -1,6 +1,6 @@
-install.packages("arules") # install the package
+install.packages("arules") # install the package arules
 library("arules") # invoke the package
-install.packages("readxl")
+install.packages("readxl")# install the package readxl
 library(readxl)
 
 mydata <- read_xlsx(file.choose(),1) # Read xlsx file
