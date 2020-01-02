@@ -23,41 +23,31 @@ attach(WalmartFootfalls)
 # partitioning
 train <- WalmartFootfalls[1:147,]
 test <- WalmartFootfalls[148:159,]
-
 ########################### LINEAR MODEL #############################
-
 linear_model <- lm(Footfalls ~ t, data = train)
 summary(linear_model)
 linear_pred <- data.frame(predict(linear_model, interval='predict', newdata =test))
 rmse_linear <- sqrt(mean((test$Footfalls-linear_pred$fit)^2, na.rm = T))
 rmse_linear
-
 ######################### Exponential #################################
-
 expo_model <- lm(log_footfalls ~ t, data = train)
 summary(expo_model)
 expo_pred <- data.frame(predict(expo_model, interval='predict', newdata = test))
 rmse_expo <- sqrt(mean((test$Footfalls-exp(expo_pred$fit))^2, na.rm = T))
 rmse_expo
-
 ######################### Quadratic ####################################
-
 Quad_model <- lm(Footfalls ~ t + t_square, data = train)
 summary(Quad_model)
 Quad_pred <- data.frame(predict(Quad_model, interval='predict', newdata=test))
 rmse_Quad <- sqrt(mean((test$Footfalls-Quad_pred$fit)^2, na.rm=T))
 rmse_Quad
-
 ######################### Additive Seasonality #########################
-
 sea_add_model <- lm(Footfalls ~ Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov, data = train)
 summary(sea_add_model)
 sea_add_pred <- data.frame(predict(sea_add_model, newdata=test, interval = 'predict'))
 rmse_sea_add <- sqrt(mean((test$Footfalls-sea_add_pred$fit)^2, na.rm = T))
 rmse_sea_add
-
 ######################## Additive Seasonality with Quadratic #################
-
 Add_sea_Quad_model <- lm(Footfalls ~ t+t_square+Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov, data = train)
 summary(Add_sea_Quad_model)
 Add_sea_Quad_pred <- data.frame(predict(Add_sea_Quad_model, interval='predict', newdata=test))
@@ -71,9 +61,7 @@ summary(multi_sea_model)
 multi_sea_pred <- data.frame(predict(multi_sea_model, newdata=test, interval='predict'))
 rmse_multi_sea <- sqrt(mean((test$Footfalls-exp(multi_sea_pred$fit))^2, na.rm = T))
 rmse_multi_sea
-
 # Preparing table on model and it's RMSE values 
-
 table_rmse <- data.frame(c("rmse_linear","rmse_expo","rmse_Quad","rmse_sea_add","rmse_Add_sea_Quad","rmse_multi_sea"),c(rmse_linear,rmse_expo,rmse_Quad,rmse_sea_add,rmse_Add_sea_Quad,rmse_multi_sea))
 colnames(table_rmse) <- c("model","RMSE")
 View(table_rmse)
@@ -87,9 +75,7 @@ View(WalmartFootfalls)
 
 Add_sea_Quad_model_final <- lm(Footfalls ~ t+t_square+Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov, data = WalmartFootfalls)
 summary(Add_sea_Quad_model_final)
-
-
-####################### Predicting new data #############################
+###################### Predicting new data #############################
 pred_new <- predict(Add_sea_Quad_model_final, newdata = test, interval = 'predict')
 pred_new <- as.data.frame(pred_new)
 View(pred_new)
