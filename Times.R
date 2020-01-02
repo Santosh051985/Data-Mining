@@ -2,8 +2,7 @@ library(readr)
 Walmart <- read.csv(file.choose()) # read the Walmart data
 View(Walmart)# Seasonality 12 months
  
-# Pre Processing
-# So creating 12 dummy variables 
+# Pre Processing So creating 12 dummy variables 
 X <- data.frame(outer(rep(month.abb,length = 159), month.abb,"==") + 0 )# Creating dummies for 12 months
 colnames(X) <- month.abb # Assigning month names 
 View(X)
@@ -96,7 +95,6 @@ pred_new <- as.data.frame(pred_new)
 View(pred_new)
 
 plot(Add_sea_Quad_model_final)
-
 
 acf(Add_sea_Quad_model_final$residuals, lag.max = 10) # take all residual value of the model built & plot ACF plot
 
