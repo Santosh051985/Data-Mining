@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import pandas as pd 
 # Importing Data 
-  data_sets = pd.read_csv('C:\\Users\\Admin\\Desktop\\Data_for_Missing_Values.csv') 
+  data_sets = pd.read_csv('C:\\Users\\HP\\Desktop\\Data_for_Missing_Values.csv') 
   print ("Data Head : \n", data_sets.head()) 
   print ("\n\nData Describe : \n", data_sets.describe()) 
   Input and Output Data """
