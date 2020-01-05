@@ -32,7 +32,6 @@ View(mydata)
 # preparing data for clustering (considering only pca scores as they represent the entire data)
 clus_data<-mydata[,8:10]
 clus_data
-
 # Normalizing the data 
 norm_clus<-scale(clus_data) # Scale function is used to normalize data
 dist1<-dist(norm_clus,method = "euclidean") # method for finding the distance
