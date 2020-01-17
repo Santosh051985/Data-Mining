@@ -1,15 +1,13 @@
 library(readr)
 Walmart <- read.csv(file.choose()) # read the Walmart data
 View(Walmart)# Seasonality 12 months
- 
-# Pre Processing So creating 12 dummy variables 
+ # Pre Processing So creating 12 dummy variables 
 X <- data.frame(outer(rep(month.abb,length = 159), month.abb,"==") + 0 )# Creating dummies for 12 months
 colnames(X) <- month.abb # Assigning month names 
 View(X)
 WalmartFootfalls <- cbind(Walmart,X)
 View(WalmartFootfalls)
 colnames(WalmartFootfalls)
-
 # input t
 WalmartFootfalls["t"] <- c(1:159)
 View(WalmartFootfalls)
@@ -67,12 +65,10 @@ colnames(table_rmse) <- c("model","RMSE")
 View(table_rmse)
 
 # Additive seasonality with Quadratic has least RMSE value
-
 write.csv(WalmartFootfalls, file="WalmartFootfalls.csv", row.names = F)
 View(WalmartFootfalls)
 
 ############### Combining Training & test data to build Additive seasonality using Quadratic Trend ############
-
 Add_sea_Quad_model_final <- lm(Footfalls ~ t+t_square+Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov, data = WalmartFootfalls)
 summary(Add_sea_Quad_model_final)
 ###################### Predicting new data #############################
