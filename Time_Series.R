@@ -98,7 +98,6 @@ class(future_errors)
 future_errors <- future_errors$Point.Forecast
 
 # predicted values for new data + future error values 
-
 predicted_new_values <- pred_new + future_errors
 View(predicted_new_values)
 write.csv(predicted_new_values, file = "predicted_new_values.csv", row.names = F)
