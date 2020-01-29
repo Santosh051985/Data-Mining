@@ -1,9 +1,12 @@
 install.packages("arules")
 data()
 library("Matrix")
-library("arules") # Used for building association rules i.e. apriori algorithm
-data("Groceries")# loading the Groceries Data
-?Groceries
+# Used for building association rules i.e. apriori algorithm
+library("arules") 
+# loading the Groceries Data
+data("Groceries")
+# To get help regarding Groceries
+?Groceries 
 inspect(Groceries[1:20])# showing only top 10 transactions
 head(Groceries)
 #class(Groceries) # Groceries is in transactions format
