@@ -1,6 +1,9 @@
+# Read iris dataset
 data("iris")
+# Display IRIS Data Set
 View(iris)
 library(C50)
+# Install Packages CARET
 install.packages("caret")
 library(caret)
 library(lattice)
