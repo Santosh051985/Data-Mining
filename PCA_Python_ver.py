@@ -1,4 +1,3 @@
-
 # importing required libraries 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -10,7 +9,6 @@ dataset = pd.read_csv('wines.csv')
 # distributing the dataset into two components X and Y 
 X = dataset.iloc[:, 0:13].values 
 y = dataset.iloc[:, 13].values 
-
 
 from sklearn.model_selection import train_test_split 
   
@@ -89,7 +87,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)): 
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], 
                 c = ListedColormap(('red', 'green', 'blue'))(i), label = j) 
-  # title for scatter plot 
+# title for scatter plot 
 plt.title('Logistic Regression (Test set)')  
 plt.xlabel('PC1') # for Xlabel 
 plt.ylabel('PC2') # for Ylabel 
