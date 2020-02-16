@@ -3,7 +3,7 @@ library(plyr)
 
 x <-  runif(50) # generating 50 random numbers
 #unif is uniform distributrution , values lie between 0 and 1
-#rnorm is random normal distribution
+
 x
 y <-  runif(50) # generating 50 random numbers 
 y
