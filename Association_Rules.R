@@ -10,7 +10,6 @@ data("Groceries")
 inspect(Groceries[1:20])# showing only top 10 transactions
 head(Groceries)
 #class(Groceries) # Groceries is in transactions format
-#summary(Groceries) 
 
 install.packages("arueslViz")
 library("arulesViz") # for visualizing rules
