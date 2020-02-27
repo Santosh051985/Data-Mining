@@ -1,7 +1,9 @@
 
-# importing required modules 
+# importing numpy for numerical calculation 
 import numpy as np 
+# importing matplotlib for plot the graph
 import matplotlib.pyplot as plt 
+# importing Pandas for manipulate data
 import pandas as pd 
 
 # Store the dataset on variable with help of read function
