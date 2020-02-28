@@ -67,13 +67,12 @@ for i, j in enumerate(np.unique(y_set)):
                 c = ListedColormap(('red', 'green', 'blue'))(i), label = j) 
   
 plt.title('Logistic Regression (Training set)') 
-plt.xlabel('PC1') # for Xlabel 
-plt.ylabel('PC2') # for Ylabel 
-plt.legend() # to show legend 
+plt.xlabel('PC1') # for Xlabel (X axis)
+plt.ylabel('PC2') # for Ylabel (Y axis)
+plt.legend()      # to show legend 
   
 # show scatter plot 
 plt.show() 
-
 
 # Visualising the Test set results through scatter plot 
 from matplotlib.colors import ListedColormap 
