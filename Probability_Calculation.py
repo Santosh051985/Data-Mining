@@ -24,7 +24,7 @@ def stdev(numbers):
 	variance = sum([(x-avg)**2 for x in numbers]) / float(len(numbers)-1)
 	return sqrt(variance)
  
-# Calculate the mean, stdev and count for each column in a dataset
+# Calculate the mean, stdev and count for each column of dataset
 def summarize_dataset(dataset):
 	summaries = [(mean(column), stdev(column), len(column)) for column in zip(*dataset)]
 	del(summaries[-1])
