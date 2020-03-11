@@ -8,7 +8,7 @@ import pandas as pd
   print ("Data Head : \n", data_sets.head()) 
   print ("\n\nData Describe : \n", data_sets.describe()) 
   Input and Output Data """
-  
+data_sets.info()  
 # All rows but all columns except last 
 X = data_sets.iloc[:, :-1].values 
   
