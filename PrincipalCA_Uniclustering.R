@@ -1,5 +1,5 @@
-# Loading Universities data
-mydata<-read.csv("Universities_clustering.csv") ## use read.csv for csv files
+# Loading Universities data 
+mydata<-read.csv("Universities_clustering.csv") ## use read.csv for to read  csv files
 View(mydata)
 help(princomp)
 
