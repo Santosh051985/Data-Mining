@@ -1,4 +1,4 @@
-# Importing Libraries
+# Import numpy for numerical calculation
   
 import numpy as np 
 import matplotlib.pyplot as plt 
