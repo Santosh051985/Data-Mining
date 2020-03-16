@@ -1,7 +1,7 @@
 install.packages("plyr")
 library(plyr)
 
-x <-  runif(50) # generating 50 random numbers
+x <-  runif(50) # generating 50 random numbers for calculation
 #unif is uniform distributrution , values lie between 0 and 1
 
 x
