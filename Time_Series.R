@@ -52,7 +52,7 @@ Add_sea_Quad_pred <- data.frame(predict(Add_sea_Quad_model, interval='predict', 
 rmse_Add_sea_Quad <- sqrt(mean((test$Footfalls - Add_sea_Quad_pred$fit)^2, na.rm=T))
 rmse_Add_sea_Quad
 
-######################## Multiplicative Seasonality #########################
+######################## Multiplicative Seasonality ############################
 
 multi_sea_model <- lm(log_footfalls ~ Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov, data = train)
 summary(multi_sea_model)
