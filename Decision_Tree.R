@@ -1,4 +1,4 @@
-# Read iris dataset to perform following Operation
+# Read iris dataset to perform Classification
 data("iris")
 # Display IRIS Data Set
 View(iris)
