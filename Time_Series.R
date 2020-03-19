@@ -18,7 +18,7 @@ View(WalmartFootfalls)
 ## Preprocesing completed
 
 attach(WalmartFootfalls)
-# partitioning
+# partitioning the data set
 train <- WalmartFootfalls[1:147,]
 test <- WalmartFootfalls[148:159,]
 ########################### LINEAR MODEL #############################
