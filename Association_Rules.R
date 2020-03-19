@@ -26,11 +26,12 @@ inspect(head(sort(arules,by="lift"))) # to view we use inspect
 # Overal quality =to chck vakues for confidence and support
 head(quality(arules))
 
-# Different Ways of Visualizing Rules
+# Different Methods of Visualizing Rules
 plot(arules)
 windows()
 plot(arules,method="grouped")
-plot(arules[1:20],method = "graph") # for good visualization try plotting only few rules
+plot(arules[1:20],method = "graph") 
+# for good visualization try plotting only few rules
 
 
 write(arules, file="a_rules.csv",sep=",")
