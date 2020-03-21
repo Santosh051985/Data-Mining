@@ -8,7 +8,7 @@ library(caTools)
 movie_rate_data <- read.csv(file.choose())#metadata about the variable
 str(movie_rate_data)
 View(movie_rate_data)
-#rating distribution
+#Rating distribution
 hist(movie_rate_data$rating)
 #the datatype should be realRatingMatrix inorder to build recommendation engine
 movie_rate_data_matrix <- as(movie_rate_data, 'realRatingMatrix')
