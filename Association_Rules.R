@@ -26,7 +26,7 @@ inspect(head(sort(arules,by="lift"))) # to view we use inspect
 # Overal quality =to chck vakues for confidence and support
 head(quality(arules))
 
-# Different Methods of Visualizing Rules
+# Different Methods of Visualizing Rules###
 plot(arules)
 windows()
 plot(arules,method="grouped")
