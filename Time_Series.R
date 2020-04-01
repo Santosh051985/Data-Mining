@@ -2,7 +2,7 @@ library(readr)
 Walmart <- read.csv(file.choose()) # read the Walmart data
 View(Walmart)# Seasonality 12 months
  # Pre Processing So creating 12 dummy variables 
-X <- data.frame(outer(rep(month.abb,length = 159), month.abb,"==") + 0 )# Creating dummies for 12 months
+X <- data.frame(outer(rep(month.abb,length = 159), month.abb,"==") + 0 )  # Creating dummies for 12 months
 colnames(X) <- month.abb # Assigning month names 
 View(X)
 WalmartFootfalls <- cbind(Walmart,X)
