@@ -6,7 +6,7 @@ View(wbcd)
 wbcd <- wbcd[-1]
 View(wbcd)
 
-# table of diagnosis
+# table of diagnosis &&&
 table(wbcd$diagnosis)
 
 str(wbcd)
