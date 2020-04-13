@@ -2,7 +2,7 @@
 setwd("C:/Users/HP/Desktop")
 wbcd<- read.csv("wbcd.csv")
 View(wbcd)
-# drop the id feature
+# drop the id feature from raw data
 wbcd <- wbcd[-1]
 View(wbcd)
 
