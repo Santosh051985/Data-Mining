@@ -92,6 +92,4 @@ plt.title('Logistic Regression (Test set)')
 plt.xlabel('PC1') # for Xlabel 
 plt.ylabel('PC2') # for Ylabel 
 plt.legend() 
-  
-# show scatter plot 
 plt.show() 
