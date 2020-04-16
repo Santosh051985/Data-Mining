@@ -1,4 +1,3 @@
-
 # importing numpy for numerical calculation 
 import numpy as np 
 # importing matplotlib for plot the graph
