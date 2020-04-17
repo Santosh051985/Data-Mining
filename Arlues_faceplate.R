@@ -1,3 +1,4 @@
+# Install Packages 
 install.packages("arules") # install the package arules
 library("arules") # invoke the package
 install.packages("readxl")# install the package readxl
