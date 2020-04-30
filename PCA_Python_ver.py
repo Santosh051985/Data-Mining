@@ -6,7 +6,7 @@ import pandas as pd
 # Store the dataset on variable with help of read function
 dataset = pd.read_csv('wines.csv') 
   
-# distributing the dataset into two components X and Y 
+# Distributing the dataset into two components X and Y 
 X = dataset.iloc[:, 0:13].values 
 y = dataset.iloc[:, 13].values 
 
