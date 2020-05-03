@@ -1,4 +1,4 @@
-# install packages
+# install packages in kernel
 install.packages("plyr")
 library(plyr)
 
