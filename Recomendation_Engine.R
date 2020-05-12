@@ -4,8 +4,8 @@ install.packages("recommenderlab", dependencies=TRUE)
 library("recommenderlab")
 library(caTools)
 
-# Read movie rating data
-movie_rate_data <- read.csv(file.choose())#metadata about the variable
+# Read movie rating data  ###
+movie_rate_data <- read.csv(file.choose())  #metadata about the variable
 str(movie_rate_data)
 View(movie_rate_data)
 #Rating distribution
