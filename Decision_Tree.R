@@ -15,7 +15,7 @@ view(training)
 testing <- iris[-inTraininglocal,]
 #model building
 model <- C5.0(training$Species~.,data = training,trails = 5)
-# Generating the model summary
+# ##Generating the model summary
 summary(model)
 pred <- predict.C5.0(model,testing[,-5])
 a <- table(testing$Species,pred)
