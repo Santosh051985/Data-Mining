@@ -1,4 +1,4 @@
-# Import numpy for numerical calculation ####
+# Import numpy for numerical calculation 
  import numpy as np 
 import matplotlib.pyplot as plt 
 import pandas as pd 
