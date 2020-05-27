@@ -1,4 +1,4 @@
-# Example of calculating class probabilities on various event ##
+# Example of calculating class probabilities on various event #
 from math import sqrt
 from math import pi
 from math import exp
