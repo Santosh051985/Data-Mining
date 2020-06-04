@@ -2,7 +2,7 @@
 install.packages("arules")
 data()
 library("Matrix")
-# Used for building association rules i.e. apriori algorithm
+# Used for building association rules i.e. apriori algorithm ######
 library("arules") 
 # loading the Groceries Data
 data("Groceries")
