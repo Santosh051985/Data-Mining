@@ -13,7 +13,6 @@ inTraininglocal <- createDataPartition(iris$Species,p=.75, list=F)
 training <- iris[inTraininglocal,]
 view(training)
 testing <- iris[-inTraininglocal,]
-#model building
 model <- C5.0(training$Species~.,data = training,trails = 5)
 # ##Generating the model summary
 summary(model)
